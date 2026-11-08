@@ -1,0 +1,327 @@
+{
+ "modules": {
+  "EN2750": "Programming for Engineering",
+  "SAS": "Signals and Systems for Communications",
+  "EN2712": "Electric Power Systems",
+  "EN2713": "Electronic Circuit Design",
+  "EN2090": "Engineering Mathematics 2",
+  "DESIGN": "Group Design Project"
+ },
+ "events": [
+  {
+   "mod": "EN2750",
+   "title": "In-lab test T1",
+   "date": "2026-10-21",
+   "start": "10:00",
+   "end": "11:50",
+   "weight": "0%",
+   "kind": "test",
+   "note": "Assignment 1 handed in at the lab. Quiz 1 this week."
+  },
+  {
+   "mod": "EN2750",
+   "title": "In-lab test T2",
+   "date": "2026-11-04",
+   "start": "10:00",
+   "end": "11:50",
+   "weight": "5%",
+   "kind": "test",
+   "note": "Assignment 2 handed in at the lab. Quiz 2 this week."
+  },
+  {
+   "mod": "SAS",
+   "title": "Class test 2 (25 min)",
+   "date": "2026-11-04",
+   "weight": "12%",
+   "kind": "test",
+   "note": "In the Wednesday morning Signals slot."
+  },
+  {
+   "mod": "EN2712",
+   "title": "Test: Three-phase transformers",
+   "date": "2026-11-05",
+   "start": "13:10",
+   "end": "14:00",
+   "room": "T/1.08, T/2.06",
+   "kind": "test",
+   "weight": "9%"
+  },
+  {
+   "mod": "EN2713",
+   "title": "Test 1: Network analysis (30 min)",
+   "kind": "test",
+   "note": "Nodal, mesh, 2-port Z/Y parameters, T/Pi-equivalent and transmission parameters.",
+   "date": "2026-11-11",
+   "weight": "10%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "Mid-semester progress review",
+   "weight": "5%",
+   "kind": "presentation",
+   "note": "1 to 2 minutes per student.",
+   "date": "2026-11-13",
+   "start": "09:00"
+  },
+  {
+   "mod": "EN2712",
+   "title": "Power test",
+   "date": "2026-11-13",
+   "start": "14:30",
+   "kind": "test",
+   "note": "Not one of the five scheduled EN2712 online tests on the slides. Check which assessment this is."
+  },
+  {
+   "mod": "EN2750",
+   "title": "In-lab test T3 (Loops)",
+   "date": "2026-11-18",
+   "start": "10:00",
+   "end": "11:50",
+   "weight": "5%",
+   "kind": "test",
+   "note": "Hand in Assignment 3 at the lab or the test scores 0. Quiz 3 this week."
+  },
+  {
+   "mod": "EN2090",
+   "title": "Coursework due (single PDF + signed cover sheet)",
+   "date": "2026-11-26",
+   "start": "12:00",
+   "weight": "20%",
+   "kind": "cw",
+   "room": "Learning Central",
+   "note": "Late work is penalised."
+  },
+  {
+   "mod": "EN2712",
+   "title": "Test: Asynchronous machines",
+   "date": "2026-11-26",
+   "start": "13:10",
+   "end": "14:00",
+   "room": "T/1.08, T/2.06",
+   "kind": "test",
+   "weight": "8%"
+  },
+  {
+   "mod": "EN2713",
+   "title": "Laboratory 1 (3 hrs x 2 x 2)",
+   "week": "2026-11-30",
+   "kind": "lab",
+   "note": "Runs weeks 9 and 10.",
+   "tbc": true
+  },
+  {
+   "mod": "EN2750",
+   "title": "In-lab test T4 (Functions)",
+   "date": "2026-12-02",
+   "start": "10:00",
+   "end": "11:50",
+   "weight": "5%",
+   "kind": "test",
+   "note": "Hand in Assignment 4 at the lab. Quiz 4 this week."
+  },
+  {
+   "mod": "SAS",
+   "title": "Class test 3 (25 min)",
+   "date": "2026-12-02",
+   "kind": "test",
+   "note": "Week 9. Assumed to be in the Wednesday morning Signals slot. Last class test.",
+   "weight": "12%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "Individual progress presentation (3 min)",
+   "week": "2026-12-07",
+   "weight": "10%",
+   "kind": "presentation",
+   "note": "Week 10 or 11.",
+   "tbc": true
+  },
+  {
+   "mod": "EN2750",
+   "title": "In-lab test T5 (Arrays)",
+   "date": "2026-12-16",
+   "start": "10:00",
+   "end": "11:50",
+   "weight": "5%",
+   "kind": "test",
+   "note": "Hand in Assignment 5 at the lab. Quiz 5 this week."
+  },
+  {
+   "mod": "EN2713",
+   "title": "Test 2: Laplace and time-domain response (30 min)",
+   "kind": "test",
+   "date": "2026-12-16",
+   "weight": "10%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "PCB individual design task due",
+   "date": "2026-12-17",
+   "start": "12:00",
+   "weight": "10%",
+   "kind": "cw",
+   "room": "Learning Central",
+   "note": "Practical design assessment, 20% across the PCB and CAD tasks."
+  },
+  {
+   "mod": "DESIGN",
+   "title": "CAD individual design task due",
+   "date": "2026-12-17",
+   "start": "12:00",
+   "weight": "10%",
+   "kind": "cw",
+   "room": "Learning Central",
+   "note": "Practical design assessment, 20% across the PCB and CAD tasks."
+  },
+  {
+   "mod": "EN2750",
+   "title": "C++ programming test",
+   "week": "2027-01-11",
+   "weight": "80%",
+   "kind": "exam",
+   "note": "In the lab, week 12. Design, write, test and debug a program from scratch. If it's the usual Wednesday lab slot, it's 13 Jan, 10:00 to 11:50.",
+   "tbc": true
+  },
+  {
+   "mod": "EN2713",
+   "title": "Laboratory 1 portfolio submission",
+   "week": "2027-01-11",
+   "kind": "cw",
+   "tbc": true,
+   "weight": "10%"
+  },
+  {
+   "mod": "EN2712",
+   "title": "Test: Synchronous machines",
+   "date": "2027-01-14",
+   "start": "13:10",
+   "kind": "test",
+   "end": "14:00",
+   "room": "T/2.08",
+   "weight": "8%"
+  },
+  {
+   "mod": "SAS",
+   "title": "Exam (90 min)",
+   "week": "2027-01-18",
+   "weight": "64%",
+   "kind": "exam",
+   "tbc": true,
+   "note": "January assessment period, 18 to 29 Jan. Three compulsory questions."
+  },
+  {
+   "mod": "EN2712",
+   "title": "Test: Transmission lines",
+   "date": "2027-03-18",
+   "start": "10:00",
+   "end": "11:50",
+   "room": "S/-1.26",
+   "kind": "test",
+   "weight": "8%"
+  },
+  {
+   "mod": "EN2712",
+   "title": "Test: Protection case study",
+   "date": "2027-05-06",
+   "start": "10:00",
+   "end": "11:50",
+   "room": "S/-1.26",
+   "kind": "test",
+   "weight": "7%"
+  }
+ ],
+ "spring_tbc": [
+  {
+   "mod": "DESIGN",
+   "title": "Spring mid-semester progress review",
+   "when": "Spring week 4 to 5",
+   "weight": "5%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "One-page report (feedback only)",
+   "when": "Spring week 8 to 9",
+   "weight": ""
+  },
+  {
+   "mod": "DESIGN",
+   "title": "Economics, Law and Accounting test (online, multiple choice)",
+   "when": "Spring, week TBC",
+   "weight": "15%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "Final group demonstration presentation",
+   "when": "Spring week 11",
+   "weight": "20%"
+  },
+  {
+   "mod": "DESIGN",
+   "title": "Final design report",
+   "when": "End of spring",
+   "weight": "25%"
+  },
+  {
+   "mod": "EN2713",
+   "title": "Laboratory 2 portfolio submission",
+   "when": "Week 26",
+   "weight": "10%"
+  },
+  {
+   "mod": "EN2712",
+   "title": "Exam (2 hours, 4 questions)",
+   "when": "Summer assessment period",
+   "weight": "60%"
+  },
+  {
+   "mod": "EN2713",
+   "title": "Exam (2 hours)",
+   "when": "Summer assessment period",
+   "weight": "60%"
+  }
+ ],
+ "key": [
+  {
+   "mod": "EN2712",
+   "name": "Electric Power Systems",
+   "credits": 20,
+   "sem": "Autumn + Spring",
+   "split": "Five online lab tests 40% (9, 8, 8, 8, 7) \u00b7 Spring exam 60%"
+  },
+  {
+   "mod": "EN2713",
+   "name": "Electronic Circuit Design",
+   "credits": 20,
+   "sem": "Autumn + Spring",
+   "split": "Two 30-min class tests 20% \u00b7 Lab portfolio 20% \u00b7 Spring exam 60%"
+  },
+  {
+   "mod": "DESIGN",
+   "name": "Group Design Project",
+   "credits": 20,
+   "sem": "Autumn + Spring",
+   "split": "Progress presentations 20% \u00b7 Design assignments 20% \u00b7 ELA test 15% \u00b7 Group demo 20% \u00b7 Report 25%"
+  },
+  {
+   "mod": "SAS",
+   "name": "Signals and Systems for Communications",
+   "credits": 10,
+   "sem": "Autumn",
+   "split": "Three 25-min class tests 36% \u00b7 January exam 64%"
+  },
+  {
+   "mod": "EN2750",
+   "name": "Programming for Engineering",
+   "credits": 10,
+   "sem": "Autumn",
+   "split": "Four lab demos 20% \u00b7 Week 12 C++ test 80%"
+  },
+  {
+   "mod": "EN2090",
+   "name": "Engineering Mathematics 2",
+   "credits": 10,
+   "sem": "Autumn",
+   "split": "Coursework 20% \u00b7 rest not known yet"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Exam Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Exams 2026/27
+X-WR-TIMEZONE:Europe/London
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:examcal-EN2713-Test1Networkanal-2026-11-11@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2713 Electronic Circuit Design: Test 1: Network analysis (30 min) (10%)
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+DESCRIPTION:Nodal\, mesh\, 2-port Z/Y parameters\, T/Pi-equivalent and transmission parameters.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2713 Electronic Circuit Design: Test 1: Network analysis (30 min) (10%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2713 Electronic Circuit Design: Test 1: Network analysis (30 min) (10%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-DESIGN-Midsemesterprogr-2026-11-13@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2710 Group Design Project: Mid-semester progress review (5%)
+DTSTART;TZID=Europe/London:20261113T090000
+DTEND;TZID=Europe/London:20261113T095000
+DESCRIPTION:1 to 2 minutes per student.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: Mid-semester progress review (5%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: Mid-semester progress review (5%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2712-Powertest-2026-11-13@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2712 Electric Power Systems: Power test
+DTSTART;TZID=Europe/London:20261113T143000
+DTEND;TZID=Europe/London:20261113T152000
+DESCRIPTION:Not one of the five scheduled EN2712 online tests on the slides. Check which assessment this is.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Power test
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Power test
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2750-InlabtestT3Loops-2026-11-18@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2750 Programming for Engineering: In-lab test T3 (Loops) (5%)
+DTSTART;TZID=Europe/London:20261118T100000
+DTEND;TZID=Europe/London:20261118T115000
+DESCRIPTION:Hand in Assignment 3 at the lab or the test scores 0. Quiz 3 this week.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T3 (Loops) (5%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T3 (Loops) (5%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2090-Courseworkduesin-2026-11-26@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2090 Engineering Mathematics 2: Coursework due (single PDF + signed cover sheet) (20%)
+DTSTART;TZID=Europe/London:20261126T120000
+DTEND;TZID=Europe/London:20261126T125000
+LOCATION:Learning Central
+DESCRIPTION:Late work is penalised.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2090 Engineering Mathematics 2: Coursework due (single PDF + signed cover sheet) (20%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2090 Engineering Mathematics 2: Coursework due (single PDF + signed cover sheet) (20%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2712-TestAsynchronous-2026-11-26@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2712 Electric Power Systems: Test: Asynchronous machines (8%)
+DTSTART;TZID=Europe/London:20261126T131000
+DTEND;TZID=Europe/London:20261126T140000
+LOCATION:T/1.08\, T/2.06
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Asynchronous machines (8%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Asynchronous machines (8%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2750-InlabtestT4Funct-2026-12-02@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2750 Programming for Engineering: In-lab test T4 (Functions) (5%)
+DTSTART;TZID=Europe/London:20261202T100000
+DTEND;TZID=Europe/London:20261202T115000
+DESCRIPTION:Hand in Assignment 4 at the lab. Quiz 4 this week.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T4 (Functions) (5%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T4 (Functions) (5%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-SAS-Classtest325min-2026-12-02@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2721 Signals and Systems for Communications: Class test 3 (25 min) (12%)
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+DESCRIPTION:Week 9. Assumed to be in the Wednesday morning Signals slot. Last class test.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2721 Signals and Systems for Communications: Class test 3 (25 min) (12%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2721 Signals and Systems for Communications: Class test 3 (25 min) (12%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2750-InlabtestT5Array-2026-12-16@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2750 Programming for Engineering: In-lab test T5 (Arrays) (5%)
+DTSTART;TZID=Europe/London:20261216T100000
+DTEND;TZID=Europe/London:20261216T115000
+DESCRIPTION:Hand in Assignment 5 at the lab. Quiz 5 this week.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T5 (Arrays) (5%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2750 Programming for Engineering: In-lab test T5 (Arrays) (5%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2713-Test2Laplaceandt-2026-12-16@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2713 Electronic Circuit Design: Test 2: Laplace and time-domain response (30 min) (10%)
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2713 Electronic Circuit Design: Test 2: Laplace and time-domain response (30 min) (10%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2713 Electronic Circuit Design: Test 2: Laplace and time-domain response (30 min) (10%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-DESIGN-PCBindividualdes-2026-12-17@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2710 Group Design Project: PCB individual design task due (10%)
+DTSTART;TZID=Europe/London:20261217T120000
+DTEND;TZID=Europe/London:20261217T125000
+LOCATION:Learning Central
+DESCRIPTION:Practical design assessment\, 20% across the PCB and CAD tasks.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: PCB individual design task due (10%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: PCB individual design task due (10%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-DESIGN-CADindividualdes-2026-12-17@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2710 Group Design Project: CAD individual design task due (10%)
+DTSTART;TZID=Europe/London:20261217T120000
+DTEND;TZID=Europe/London:20261217T125000
+LOCATION:Learning Central
+DESCRIPTION:Practical design assessment\, 20% across the PCB and CAD tasks.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: CAD individual design task due (10%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2710 Group Design Project: CAD individual design task due (10%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2712-TestSynchronousm-2027-01-14@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2712 Electric Power Systems: Test: Synchronous machines (8%)
+DTSTART;TZID=Europe/London:20270114T131000
+DTEND;TZID=Europe/London:20270114T140000
+LOCATION:T/2.08
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Synchronous machines (8%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Synchronous machines (8%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2712-TestTransmission-2027-03-18@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2712 Electric Power Systems: Test: Transmission lines (8%)
+DTSTART;TZID=Europe/London:20270318T100000
+DTEND;TZID=Europe/London:20270318T115000
+LOCATION:S/-1.26
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Transmission lines (8%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Transmission lines (8%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:examcal-EN2712-TestProtectionca-2027-05-06@exam-calendar
+DTSTAMP:20261108T213411Z
+SUMMARY:EN2712 Electric Power Systems: Test: Protection case study (7%)
+DTSTART;TZID=Europe/London:20270506T100000
+DTEND;TZID=Europe/London:20270506T115000
+LOCATION:S/-1.26
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Protection case study (7%)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EN2712 Electric Power Systems: Test: Protection case study (7%)
+TRIGGER:-P2D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
