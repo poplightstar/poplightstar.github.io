@@ -25,9 +25,12 @@ header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end
 h1{font:700 44px/1 var(--serif);margin:0;letter-spacing:-.01em}
 .links{font-size:14px;display:flex;gap:18px;flex-wrap:wrap}
 a{color:var(--ink)}
-.next{padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px}
-.next b{color:var(--red)}
-.next .when{font-family:var(--mono);font-size:14px;color:var(--faint)}
+.next{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:2px 18px;align-items:center}
+.next .cd{grid-row:span 3;font:700 52px/0.9 var(--serif);color:var(--red);text-align:center;min-width:64px}
+.next .cd small{display:block;font:600 11px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+.next .lbl{font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.next .ttl{font-size:18px;font-weight:600;line-height:1.25}
+.next .when{font-size:14px;color:var(--faint)}
 .bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:14px 0 6px;font-size:13px}
 .filters{display:flex;flex-wrap:wrap;gap:4px 14px}
 .filters button{font:inherit;background:none;border:0;padding:2px 0;color:var(--faint);cursor:pointer}
@@ -36,8 +39,11 @@ a{color:var(--ink)}
 .key{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--faint)}
 .tag{font:600 10px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:2px 3px;border:1px solid currentColor;display:inline-block;vertical-align:1px}
 .k-test{color:var(--red)} .k-exam{color:var(--red)} .k-cw{color:var(--amber)} .k-presentation{color:var(--blue)} .k-lab{color:var(--green)}
-.modkey{margin-top:22px;border-top:1px solid var(--rule)}
-.modkey h2{font:500 22px var(--serif);margin:14px 0 6px}
+.modkey{margin-top:18px;border-top:1px solid var(--rule)}
+.modkey summary{font:500 22px var(--serif);padding:12px 0 6px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline}
+.modkey summary::-webkit-details-marker{display:none}
+.modkey summary::after{content:"Show";font:13px var(--sans);color:var(--faint);text-decoration:underline}
+.modkey[open] summary::after{content:"Hide"}
 .modkey dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 28px;margin:0}
 .modkey div{padding:9px 0;border-bottom:1px solid var(--rule);min-width:0}
 .modkey dt{font-weight:600}
@@ -74,18 +80,47 @@ td:last-child{text-align:right;font-family:var(--mono);font-size:13px;color:var(
 .notes h2{font:500 22px var(--serif);margin:0 0 6px}
 .notes ul{margin:0;padding-left:18px;display:grid;gap:6px}
 footer{margin-top:40px;font-size:12px;color:var(--faint)}
+.rel{display:none}
+.showpast{display:none}
 @media (max-width:720px){
-  h1{font-size:34px}
-  .grid{display:block;border:0;border-top:1px solid var(--ink)}
+  main{padding:20px max(16px,env(safe-area-inset-right)) 48px max(16px,env(safe-area-inset-left))}
+  header{align-items:baseline}
+  h1{font-size:32px}
+  .links{font-size:13px;gap:14px}
+  .next{padding:18px 0}
+  .bar{position:sticky;top:0;z-index:5;background:var(--paper);margin:0 -16px;padding:10px 16px 8px;border-bottom:1px solid var(--rule);display:block}
+  .bar .key{margin-top:8px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;gap:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:0 16px}
+  .filters::-webkit-scrollbar{display:none}
+  .filters button{flex:none;border:1px solid var(--rule);padding:8px 14px;color:var(--ink);font-size:14px;white-space:nowrap}
+  .filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);text-decoration:none}
+  .key{font-size:12px}
+  section.month{margin-top:28px}
+  .month h2{font-size:26px;margin:0;padding:10px 0 8px}
+  .grid{display:block;border:0;border-top:2px solid var(--ink)}
   .dow,.wk,.tbcfill,.day.out{display:none}
-  .day{min-height:0;flex-direction:row;gap:12px;border:0;border-bottom:1px solid var(--rule);padding:10px 0;background:none}
+  .day{min-height:0;display:grid;grid-template-columns:52px 1fr;gap:14px;border:0;border-bottom:1px solid var(--rule);padding:14px 0;background:none}
   .day.weekend,.day.recess{background:none}
-  .day.empty{display:none}
-  .day .n{min-width:64px}
-  .day .n::before{content:attr(data-dow) " "}
-  .day .evs{display:grid;gap:8px}
-  td:last-child{white-space:normal;max-width:40%}
-  .tbc{border:0;border-bottom:1px solid var(--rule);padding:10px 0;display:grid}
+  .day.empty,.day.todayempty{display:none}
+  body:not(.allpast) .day.past{display:none}
+  .day.past > *{opacity:.5}
+  .day.today{outline:0;border-left:3px solid var(--ink);padding-left:10px;grid-template-columns:49px 1fr}
+  .day.today .n::after,.day.recess .n::after{content:none}
+  .day .n{display:flex;flex-direction:column;align-items:flex-start;font:700 26px/1 var(--serif)}
+  .day .n::before{content:attr(data-dow);font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+  .day .rel{display:block;font:600 11px var(--sans);color:var(--red);margin-top:6px;white-space:nowrap}
+  .day .evs{display:grid;gap:12px;min-width:0}
+  .ev{font-size:15px;line-height:1.35}
+  .ev .m{font-size:13px;margin-top:2px}
+  .ev .tag{font-size:10px;padding:3px 4px;vertical-align:2px}
+  .tbc{border:0;border-bottom:1px solid var(--rule);padding:14px 0;display:grid;gap:12px}
+  .tbc .lbl{font-size:11px;letter-spacing:.06em}
+  .showpast{display:block;margin:10px 0 0;font:inherit;font-size:13px;background:none;border:0;color:var(--faint);text-decoration:underline;padding:8px 0;cursor:pointer}
+  .later h2{font-size:24px}
+  table,tbody,tr,td{display:block}
+  tr{border-bottom:1px solid var(--rule);padding:10px 0}
+  td{border:0;padding:0}
+  td:last-child{text-align:left;font-size:13px;margin-top:4px}
 }
 </style>
 </head>
@@ -100,7 +135,8 @@ footer{margin-top:40px;font-size:12px;color:var(--faint)}
     <div class="filters" id="filters"></div>
     <div class="key"><span><span class="tag k-test">Test</span></span><span><span class="tag k-cw">Due</span></span><span><span class="tag k-presentation">Pres</span></span><span><span class="tag k-lab">Lab</span></span></div>
   </div>
-  <section class="modkey"><h2>Key</h2><dl id="modkey"></dl></section>
+  <details class="modkey" id="keybox"><summary>Module key</summary><dl id="modkey"></dl></details>
+  <button class="showpast" id="showpast">Show past days</button>
   <div id="months"></div>
   <div class="later">
     <h2>Spring and summer, week only</h2>
@@ -166,8 +202,10 @@ function render(){
       html += `<div class="wk">${wn ? "Week " + wn : ""}</div>`;
       for (let i=0;i<7;i++){
         const k = iso(d), out = d.getMonth() !== m, list = out ? [] : (byDay[k]||[]);
-        const cls = ["day", out&&"out", i>4&&"weekend", k<T&&"past", k===T&&"today", (!out && d>=RECESS[0] && d<=RECESS[1])&&"recess", !list.length&&k!==T&&"empty"].filter(Boolean).join(" ");
-        html += `<div class="${cls}"><div class="n" data-dow="${DOW[i]}">${d.getDate()}</div><div class="evs">${list.map(e=>evHTML(e)).join("")}</div></div>`;
+        const cls = ["day", out&&"out", i>4&&"weekend", k<T&&"past", k===T&&"today", (!out && d>=RECESS[0] && d<=RECESS[1])&&"recess", !list.length&&k!==T&&"empty", !list.length&&k===T&&"todayempty"].filter(Boolean).join(" ");
+        const dd = Math.round((d - parse(T)) / 864e5);
+        const rel = list.length && dd >= 0 && dd <= 21 ? `<span class="rel">${dd===0?"Today":dd===1?"Tomorrow":"in "+dd+" days"}</span>` : "";
+        html += `<div class="${cls}"><div class="n" data-dow="${DOW[i]}">${d.getDate()}${rel}</div><div class="evs">${list.map(e=>evHTML(e)).join("")}</div></div>`;
         d = addDays(d,1);
       }
       const wk = byWeek[iso(mon)];
@@ -190,7 +228,9 @@ function render(){
     ? parse(nx.date).toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}) + (nx.start ? ", " + nx.start : "") + (nx.room ? ", " + nx.room : "")
     : "week of " + parse(nx.week).toLocaleDateString("en-GB",{day:"numeric",month:"long"}) + ", day TBC";
   const dueIn = !nx.date ? (days <= 7 ? "this week" : `week of ${parse(nx.week).getDate()} ${parse(nx.week).toLocaleDateString("en-GB",{month:"short"})}`) : days <= 0 ? "today" : days === 1 ? "tomorrow" : `in ${days} days`;
-  el.innerHTML = `Next up ${dueIn}: <b>${label(nx.mod)} ${nx.title}</b>${nx.weight?` (${nx.weight})`:""} <span class="when">${when}</span>`;
+  const big = !nx.date ? (days <= 7 ? "Wk" : days) : days <= 0 ? "0" : days;
+  const unit = !nx.date && days <= 7 ? "this week" : days === 1 ? "day" : "days";
+  el.innerHTML = `<div class="cd">${big}<small>${unit}</small></div><div class="lbl">Next up ${dueIn}</div><div class="ttl">${label(nx.mod)} ${SHORT[nx.mod]}: ${nx.title}${nx.weight?` <span style="font-weight:400;color:var(--faint)">${nx.weight}</span>`:""}</div><div class="when">${when}</div>`;
 }
 
 function filters(){
@@ -204,6 +244,8 @@ function filters(){
   sync();
 }
 
+if (matchMedia("(min-width:721px)").matches) document.getElementById("keybox").open = true;
+document.getElementById("showpast").onclick = e => { const on = document.body.classList.toggle("allpast"); e.target.textContent = on ? "Hide past days" : "Show past days"; };
 fetch("events.json").then(r=>r.json()).then(d => { DATA = d; document.getElementById("modkey").innerHTML = d.key.map(k=>`<div><dt>${label(k.mod)} ${k.name} <span>· ${k.credits} credits · ${k.sem}</span></dt><dd>${k.split}</dd></div>`).join(""); filters(); render(); })
   .catch(() => { document.getElementById("next").textContent = "Couldn't load events.json."; });
 </script>
