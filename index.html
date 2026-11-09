@@ -157,9 +157,9 @@ footer{margin-top:40px;font-size:12px;color:var(--faint)}
 </main>
 <script>
 const TAG = {test:"Test",exam:"Final",cw:"Due",presentation:"Pres",lab:"Lab"};
-const NAMES = {SAS:"EN2721",DESIGN:"EN2710"};
-const SHORT = {EN2750:"Programming",SAS:"Signals",EN2712:"Power",EN2713:"Circuits",EN2090:"Maths",DESIGN:"Design"};
-const label = m => NAMES[m] || m;
+const NAMES = {SAS:"EN2721",DESIGN:"EN2710",GEN:""};
+const SHORT = {GEN:"Lab",EN2750:"Programming",SAS:"Signals",EN2712:"Power",EN2713:"Circuits",EN2090:"Maths",DESIGN:"Design"};
+const label = m => (m in NAMES ? NAMES[m] : m);
 const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 const parse = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
 const addDays = (d,n) => { const x = new Date(d.getFullYear(),d.getMonth(),d.getDate()); x.setDate(x.getDate()+n); return x; };

@@ -5,7 +5,8 @@
   "EN2712": "Electric Power Systems",
   "EN2713": "Electronic Circuit Design",
   "EN2090": "Engineering Mathematics 2",
-  "DESIGN": "Group Design Project"
+  "DESIGN": "Group Design Project",
+  "GEN": "Lab"
  },
  "events": [
   {
@@ -45,6 +46,13 @@
    "room": "T/1.08, T/2.06",
    "kind": "test",
    "weight": "9%"
+  },
+  {
+   "mod": "GEN",
+   "title": "Lab",
+   "date": "2026-11-10",
+   "start": "09:00",
+   "kind": "lab"
   },
   {
    "mod": "EN2713",
