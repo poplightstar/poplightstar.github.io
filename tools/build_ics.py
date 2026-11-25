@@ -17,7 +17,9 @@ for e in d['events']:
         L+=[f"DTSTART;TZID=Europe/London:{s:%Y%m%dT%H%M%S}",f"DTEND;TZID=Europe/London:{en:%Y%m%dT%H%M%S}"]
     else: L+=[f"DTSTART;VALUE=DATE:{dt:%Y%m%d}",f"DTEND;VALUE=DATE:{dt+timedelta(days=1):%Y%m%d}"]
     if e.get('room'): L.append(f"LOCATION:{esc(e['room'])}")
-    if e.get('note'): L.append("DESCRIPTION:"+esc(e['note']))
+    desc=' '.join(x for x in [e.get('reminder') and e['reminder']+'.', e.get('note')] if x)
+    if desc: L.append("DESCRIPTION:"+esc(desc))
+    if e.get('reminder'): L+=["BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+esc(e['reminder']),"TRIGGER:-PT3H","END:VALARM"]
     for t in ("-P7D","-P2D"): L+=["BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+esc(summ),"TRIGGER:"+t,"END:VALARM"]
     L.append("END:VEVENT")
 L.append("END:VCALENDAR")
